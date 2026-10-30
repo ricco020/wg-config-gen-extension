@@ -1,0 +1,11 @@
+{
+ "extName": {
+  "message": "Config Generator for WireGuard: Offline Keys"
+ },
+ "extDesc": {
+  "message": "Generate WireGuard server and client .conf files with keys created on your device. No account, no upload, no permissions."
+ },
+ "actionTitle": {
+  "message": "Generate WireGuard configs"
+ }
+}

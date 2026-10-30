@@ -1,0 +1,11 @@
+{
+ "extName": {
+  "message": "Gerador de config WireGuard: chaves offline"
+ },
+ "extDesc": {
+  "message": "Arquivos .conf do WireGuard para servidor e clientes, chaves criadas no seu aparelho. Sem conta nem permissões. Em inglês."
+ },
+ "actionTitle": {
+  "message": "Gerar configs do WireGuard"
+ }
+}

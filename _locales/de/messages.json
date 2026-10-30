@@ -1,0 +1,11 @@
+{
+ "extName": {
+  "message": "WireGuard Config Generator: Schlüssel offline"
+ },
+ "extDesc": {
+  "message": "WireGuard .conf für Server und Clients, Schlüssel auf deinem Gerät erzeugt. Kein Konto, keine Rechte. Oberfläche englisch."
+ },
+ "actionTitle": {
+  "message": "WireGuard-Konfiguration erzeugen"
+ }
+}

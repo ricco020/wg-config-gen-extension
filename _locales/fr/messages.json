@@ -1,0 +1,11 @@
+{
+ "extName": {
+  "message": "Générateur de config WireGuard : clés hors ligne"
+ },
+ "extDesc": {
+  "message": "Fichiers .conf WireGuard serveur et clients, clés créées sur votre appareil. Sans compte ni permission. Interface en anglais."
+ },
+ "actionTitle": {
+  "message": "Générer des configs WireGuard"
+ }
+}
