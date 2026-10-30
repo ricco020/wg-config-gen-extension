@@ -3,6 +3,7 @@ const SITE = "https://www.vpnsmith.com";
 const utm = (c) => `utm_source=chrome-extension&utm_medium=wg-config-gen&utm_content=${c}`;
 $("guide").href = `${SITE}/en/blog/self-host-vpn-contabo-wireguard-2026?${utm("guide")}`;
 $("full").href = `${SITE}/en/tools/wireguard-config-generator?${utm("full-generator")}`;
+$("src").href = "https://github.com/ricco020/wg-config-gen-extension";
 $("vps").href = `${SITE}/go/contabo-vps-2y?src=ext-wg-gen`;
 
 let files = [], cur = 0;

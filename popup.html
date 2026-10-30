@@ -16,25 +16,31 @@
       <input id="endpoint" type="text" placeholder="203.0.113.10 or vpn.example.com" spellcheck="false">
       <span class="hint">Your server's public IP or hostname. Left empty, the file keeps a placeholder to replace.</span>
     </label>
-    <label>Port <input id="port" type="number" min="1" max="65535" value="51820"></label>
-    <label>Clients <input id="peers" type="number" min="1" max="10" value="1"></label>
-    <label>Subnet <input id="subnet" type="text" value="10.8.0.0/24" spellcheck="false"></label>
-    <label>Client DNS
-      <select id="dns">
-        <option value="1.1.1.1, 1.0.0.1">Cloudflare</option>
-        <option value="9.9.9.9, 149.112.112.112">Quad9</option>
-        <option value="94.140.14.14, 94.140.15.15">AdGuard</option>
-        <option value="10.8.0.1">Server (own resolver)</option>
-      </select>
-    </label>
-    <label class="wide">Client traffic
-      <select id="route">
-        <option value="0.0.0.0/0, ::/0">All traffic through the tunnel (full VPN)</option>
-        <option value="subnet">Only the VPN subnet (split tunnel)</option>
-      </select>
-    </label>
-    <label class="check wide"><input id="psk" type="checkbox" checked> Add a preshared key per client (extra layer, recommended)</label>
+    <label class="wide">Number of clients <input id="peers" type="number" min="1" max="10" value="1"></label>
+    <details class="adv wide">
+      <summary>Advanced settings <span class="defaults">port 51820 · 10.8.0.0/24 · Cloudflare DNS · full tunnel · preshared keys</span></summary>
+      <div class="grid">
+        <label>Port <input id="port" type="number" min="1" max="65535" value="51820"></label>
+        <label>Subnet <input id="subnet" type="text" value="10.8.0.0/24" spellcheck="false"></label>
+        <label class="wide">Client DNS
+          <select id="dns">
+            <option value="1.1.1.1, 1.0.0.1">Cloudflare (1.1.1.1)</option>
+            <option value="9.9.9.9, 149.112.112.112">Quad9 (9.9.9.9)</option>
+            <option value="94.140.14.14, 94.140.15.15">AdGuard (94.140.14.14)</option>
+            <option value="10.8.0.1">Server (own resolver)</option>
+          </select>
+        </label>
+        <label class="wide">Client traffic
+          <select id="route">
+            <option value="0.0.0.0/0, ::/0">All traffic through the tunnel (full VPN)</option>
+            <option value="subnet">Only the VPN subnet (split tunnel)</option>
+          </select>
+        </label>
+        <label class="check wide"><input id="psk" type="checkbox" checked> Preshared key per client (recommended)</label>
+      </div>
+    </details>
     <button id="go" type="submit" class="primary wide">Generate configs</button>
+    <p class="local wide">Keys are generated in this popup with Web Crypto (X25519). The extension has no permissions and makes no network request. <a id="src" target="_blank" rel="noopener">Source code</a></p>
   </form>
 
   <p id="err" class="err" hidden></p>
@@ -50,13 +56,10 @@
   </section>
 
   <aside class="next">
-    <p class="next-t">No server yet?</p>
-    <p>WireGuard needs a Linux server with a public IP. A small VPS is enough for a few devices.</p>
-    <p class="links">
-      <a id="guide" target="_blank" rel="noopener">Step-by-step setup guide</a>
-      <a id="vps" target="_blank" rel="noopener sponsored">Contabo VPS (our pick)</a>
-    </p>
-    <p class="disc">The Contabo link is an affiliate link: VPNSmith may earn a commission, at no extra cost to you. QR codes for phones: <a id="full" target="_blank" rel="noopener">full generator on vpnsmith.com</a>.</p>
+    <p class="next-t">Prepare your server</p>
+    <p>WireGuard needs a Linux server with a public IP. <a id="guide" target="_blank" rel="noopener">Self-hosting guide</a> (vpnsmith.com).</p>
+    <p class="disc">Server we use: <a id="vps" target="_blank" rel="noopener sponsored">Contabo VPS</a> (affiliate link, VPNSmith may earn a commission at no cost to you).</p>
+    <p class="disc">Need QR codes for phones? The <a id="full" target="_blank" rel="noopener">web version on vpnsmith.com</a> adds them.</p>
   </aside>
   <footer class="foot">WireGuard is a registered trademark of Jason A. Donenfeld. Independent tool, not affiliated.</footer>
 </main>

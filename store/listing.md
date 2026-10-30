@@ -1,6 +1,7 @@
 # Chrome Web Store listing (EN)
 
 Category: Developer tools. Language: English.
+CWS item: nknonajkbiboimkeglehfloleidhjokc (draft created by API 30/10 21:48). Upload order: 01-generate, 02-client, 03-server; small tile tile-440x280.png. Privacy tab: single purpose below, no permissions to justify, remote code NO, data collected NONE, 3 certifications.
 
 ## Summary (manifest, 132 max)
 Generate WireGuard server and client .conf files with keys created on your device. No account, no upload, no permissions.
