@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><link rel="stylesheet" href="popup.css"><title>Config Generator for WireGuard</title></head>
+<body>
+<main class="panel">
+  <header class="top">
+    <img src="icons/icon-48.png" alt="" width="28" height="28">
+    <div>
+      <h1>WG Config Gen</h1>
+      <p class="sub">Keys made on this device. Nothing is sent anywhere.</p>
+    </div>
+  </header>
+
+  <form id="f" class="grid" autocomplete="off">
+    <label class="wide">Server public address
+      <input id="endpoint" type="text" placeholder="203.0.113.10 or vpn.example.com" spellcheck="false">
+      <span class="hint">Your server's public IP or hostname. Left empty, the file keeps a placeholder to replace.</span>
+    </label>
+    <label>Port <input id="port" type="number" min="1" max="65535" value="51820"></label>
+    <label>Clients <input id="peers" type="number" min="1" max="10" value="1"></label>
+    <label>Subnet <input id="subnet" type="text" value="10.8.0.0/24" spellcheck="false"></label>
+    <label>Client DNS
+      <select id="dns">
+        <option value="1.1.1.1, 1.0.0.1">Cloudflare</option>
+        <option value="9.9.9.9, 149.112.112.112">Quad9</option>
+        <option value="94.140.14.14, 94.140.15.15">AdGuard</option>
+        <option value="10.8.0.1">Server (own resolver)</option>
+      </select>
+    </label>
+    <label class="wide">Client traffic
+      <select id="route">
+        <option value="0.0.0.0/0, ::/0">All traffic through the tunnel (full VPN)</option>
+        <option value="subnet">Only the VPN subnet (split tunnel)</option>
+      </select>
+    </label>
+    <label class="check wide"><input id="psk" type="checkbox" checked> Add a preshared key per client (extra layer, recommended)</label>
+    <button id="go" type="submit" class="primary wide">Generate configs</button>
+  </form>
+
+  <p id="err" class="err" hidden></p>
+
+  <section id="out" hidden>
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <pre id="conf" tabindex="0"></pre>
+    <div class="row">
+      <button id="copy" type="button">Copy</button>
+      <button id="dl" type="button">Download .conf</button>
+    </div>
+    <p class="hint">Private keys are shown once. Close this popup and they are gone: download every file first.</p>
+  </section>
+
+  <aside class="next">
+    <p class="next-t">No server yet?</p>
+    <p>WireGuard needs a Linux server with a public IP. A small VPS is enough for a few devices.</p>
+    <p class="links">
+      <a id="guide" target="_blank" rel="noopener">Step-by-step setup guide</a>
+      <a id="vps" target="_blank" rel="noopener sponsored">Contabo VPS (our pick)</a>
+    </p>
+    <p class="disc">The Contabo link is an affiliate link: VPNSmith may earn a commission, at no extra cost to you. QR codes for phones: <a id="full" target="_blank" rel="noopener">full generator on vpnsmith.com</a>.</p>
+  </aside>
+  <footer class="foot">WireGuard is a registered trademark of Jason A. Donenfeld. Independent tool, not affiliated.</footer>
+</main>
+<script src="wg.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>

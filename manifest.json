@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Config Generator for WireGuard: Offline Keys",
+  "short_name": "WG Config Gen",
+  "version": "1.0.0",
+  "description": "Generate WireGuard server and client .conf files with keys created on your device. No account, no upload, no permissions.",
+  "minimum_chrome_version": "133",
+  "icons": { "16": "icons/icon-16.png", "32": "icons/icon-32.png", "48": "icons/icon-48.png", "128": "icons/icon-128.png" },
+  "action": {
+    "default_title": "Generate WireGuard configs",
+    "default_popup": "popup.html",
+    "default_icon": { "16": "icons/icon-16.png", "32": "icons/icon-32.png", "48": "icons/icon-48.png", "128": "icons/icon-128.png" }
+  }
+}
