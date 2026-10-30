@@ -7,4 +7,4 @@ Last updated: 30 October 2026. Publisher: VPNSmith (vpnsmith.com).
 - Nothing is stored, logged, synced or sent: no analytics, no tracking, no account.
 - The popup contains links to vpnsmith.com (a setup guide and a full web generator, tagged with `utm_` parameters that say the visit came from the extension) and one affiliate link to a VPS provider. These pages open only when you click them; their own privacy policy then applies.
 
-Contact: open an issue on https://github.com/ricco020/wg-config-generator/issues
+Contact: open an issue on https://github.com/ricco020/wg-config-gen-extension/issues

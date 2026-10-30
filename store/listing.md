@@ -32,4 +32,4 @@ Generate WireGuard configuration files and keys locally.
 None. Remote code: no. Data collected: none.
 
 ## Privacy policy URL
-https://github.com/ricco020/wg-config-generator/blob/main/PRIVACY.md
+https://github.com/ricco020/wg-config-gen-extension/blob/main/PRIVACY.md
