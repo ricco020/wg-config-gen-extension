@@ -10,7 +10,7 @@ Build a WireGuard server file (`wg0.conf`) and 1 to 10 client files in your brow
 - Endpoint, listen port, VPN subnet and DNS fields.
 - Full tunnel (`0.0.0.0/0, ::/0`) or split tunnel (only the VPN subnet).
 - Copy or download every file: `wg0.conf` for the server, `client1.conf`, `client2.conf`... for the devices.
-- Interface in English, French, Spanish, German, Portuguese (Brazil) and Italian.
+- Interface in English (store name and summary also in French, Spanish, German, Portuguese and Italian).
 
 ![A client file ready to import](store/assets/02-client.png)
 
